@@ -69,8 +69,7 @@ public class TextFileManager implements Serializable{
     }
     
     /**
-     * Returns the next line in the file. Returns null if there is no more lines. If the file has been overwrited (not modified) by this object while reading, returns the first line.
-     * If the FileReader or the BufferedReader are null, it calls the corresponding methods to instantiate it.
+     * Returns the next line in the file - Returns null if there is no more lines - If the file has been overwrited (not modified) by this object while reading, returns the first line - If the FileReader or the BufferedReader are null, it calls the corresponding methods to instantiate it.
      */
     public String readLine(){
         String linea;
@@ -95,7 +94,7 @@ public class TextFileManager implements Serializable{
     }
     
     /**
-     * Resets the reader by setting it in null. The next read will start at the begining of the file.
+     * Resets the reader by setting it in null - The next read will start at the begining of the file.
      */
     public void resetTextReader(){
         fr = null;
@@ -108,7 +107,7 @@ public class TextFileManager implements Serializable{
     boolean append;
     /**
      * This method instantiates the FileWritter.
-     * @append If true the FileWritter will append the text at the end of the file. | If false the FileWritter will overwrite the file.
+     * @append If true the FileWritter will append the text at the end of the file - If false the FileWritter will overwrite the file.
      */
     private void innitFileWritter(boolean append){
         this.append = append;
@@ -119,8 +118,8 @@ public class TextFileManager implements Serializable{
         }
     }
     /**
-     * This method checks if the file is instantiated, if so, it calls the method that instantiates the FileWriter. After this, it checks if it has been instantiated correctly.
-     * @append If true the FileWritter will append the text at the end of the file. | If false the FileWritter will overwrite the file.
+     * This method checks if the file is instantiated, if so, it calls the method that instantiates the FileWriter - After this, it checks if it has been instantiated correctly.
+     * @append If true the FileWritter will append the text at the end of the file - If false the FileWritter will overwrite the file.
      */
     private boolean checkWritter(boolean append){
         if(fw == null){
@@ -140,7 +139,7 @@ public class TextFileManager implements Serializable{
     }
     
     /**
-     * Writes a String in the file trough the FileWritter. Then it closes the FileWriter.
+     * Writes a String in the file trough the FileWritter, then it closes the FileWriter.
      * @text Text to write.
      */
     private void tryWrite(String text){
